@@ -1,15 +1,25 @@
 {
-  "name": "make-npm-package",
-  "private": true,
-  "version": "0.0.0",
+  "name": "make_npm_package",
+  "private": false,
+  "version": "1.0.6",
   "type": "module",
+  "main": "./dist/useTimer.js",
+  "exports": {
+    ".": {
+      "default": "./dist/useTimer.js",
+      "types": "./src/lib/types.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "tsc && vite build"
   },
   "dependencies": {
+    "make_npm_package": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
